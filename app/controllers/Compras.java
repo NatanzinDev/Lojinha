@@ -8,4 +8,8 @@ public class Compras extends Controller{
 	public static void principal() {
 		render();
 	}
+	
+	public static void produtos() {
+		render();
+	}
 }

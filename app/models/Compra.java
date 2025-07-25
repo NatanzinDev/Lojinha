@@ -1,5 +1,8 @@
 package models;
 
-public class Compra {
+import java.util.Date;
 
+public class Compra {
+	public Date data;
+	public Double valortotal;
 }
