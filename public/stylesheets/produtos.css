@@ -1,0 +1,84 @@
+ body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdf7f8;
+            color: #444;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .title-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title {
+            font-size: 2.5em;
+            font-weight: 500;
+            color: #333;
+            border-bottom: 2px solid #e7c0a8;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Grid para os produtos */
+        .product-grid {
+            display: grid;
+            /* Cria colunas responsivas: no mínimo 280px de largura,
+               preenchendo o espaço e quebrando a linha automaticamente. */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Card de cada produto */
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden; /* Garante que a imagem não saia dos cantos arredondados */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- CONTROLE DA IMAGEM --- */
+        .image-container {
+            width: 100%;
+            height: 280px; /* Altura fixa para a área da imagem */
+            background-color: #f0f0f0; /* Fundo para caso a imagem não carregue */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            /* Chave para o controle: a imagem cobre o container
+               sem distorcer, cortando o excesso. */
+            object-fit: cover;
+        }
+        /* --- FIM DO CONTROLE DA IMAGEM --- */
+
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1; /* Faz esta área ocupar o espaço restante */
+        }
+
+        .product-name {
+            font-size: 1.2em;
+            font-weight: 500;
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+
+        .product-price {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #d13670; /* Cor rosa/magenta da marca */
+            margin: 0;
+        }
+
+    
+
+    

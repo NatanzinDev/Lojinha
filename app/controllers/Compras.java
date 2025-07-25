@@ -1,5 +1,8 @@
 package controllers;
 
+import java.util.List;
+
+import models.Produto;
 import play.mvc.Controller;
 
 public class Compras extends Controller{
@@ -9,7 +12,9 @@ public class Compras extends Controller{
 		render();
 	}
 	
+	//Página de produtos 
 	public static void produtos() {
-		render();
+		List<Produto> produtos = Produto.findAll();
+		render(produtos);
 	}
 }
