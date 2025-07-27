@@ -18,17 +18,14 @@
                 </div>
                 <div class="card-content">
                     <h3 class="product-name">${item.nome}</h3>
+                    <p class="product-description">${item.descricao}</p>
                     <p class="product-price">R$ ${item.preco}</p>
-
-                    
                 </div>
             </div>
-        #{/list}</div>
-    </div>
-</div>
-
- #{else}
- 	<p>Não há protudos cadastrados.</p>
-  #{/else}
+        #{/list}
+        #{else}
+            <p>Não há produtos cadastrados.</p>
+        #{/else}
+    </div> </div> ```
 
 	
