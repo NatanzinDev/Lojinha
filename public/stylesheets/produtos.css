@@ -111,6 +111,29 @@
     margin: 0;
 }
 
+.product-link {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Faz o texto dentro do link herdar a cor, em vez de ficar azul */
+}
+
+/* Ajuste no card para manter o efeito de hover */
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garante que o card ocupe todo o espaço do link */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionada transição */
+}
+
+/* Efeito de hover aplicado quando o mouse passa sobre o link */
+.product-link:hover .product-card {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
     
 
     

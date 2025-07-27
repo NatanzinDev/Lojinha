@@ -9,9 +9,11 @@
     <div class="title-container">
         <h1 class="page-title">Nossos Produtos</h1>
     </div>
-
+	
+	
     <div class="product-grid">
         #{list items:produtos, as:'item'}
+        <a href="@{Compras.detalharproduto(item.id)}" class="product-link">
             <div class="product-card">
                 <div class="image-container">
                     <img src="${item.foto}" alt="${item.nome}">
@@ -21,8 +23,11 @@
                     <p class="product-description">${item.descricao}</p>
                     <p class="product-price">R$ ${item.preco}</p>
                 </div>
+                
             </div>
+          </a>
         #{/list}
+         
         #{else}
             <p>Não há produtos cadastrados.</p>
         #{/else}

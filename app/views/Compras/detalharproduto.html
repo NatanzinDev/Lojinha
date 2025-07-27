@@ -1,3 +1,8 @@
+#{extends 'main.html' /}
+#{set title:'Nega Biju' /}
+
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/editar.css'}">
+
  <div class="container">
 
         <div class="product-detail-container">
@@ -15,15 +20,15 @@
             </div>
         </div>
 
-        <div class="reviews-section">
+      <div class="reviews-section">
             <h2 class="reviews-title">Avaliações do Produto</h2>
 
-            #{if produto.avaliacoes.size() > 0}
+            #{if avaliacao.size() > 0}
                 <div class="reviews-list">
-                    #{list items:produto.avaliacoes, as:'avaliacao'}
+                    #{list items:avaliacao, as:'a'}
                         <div class="review-card">
-                            <h3 class="review-author"><i class='bx bxs-user-circle'></i>${avaliacao.nomeUsuario}</h3>
-                            <p class="review-text">${avaliacao.mensagem}</p>
+                            <h3 class="review-author"><i class='bx bxs-user-circle'></i>${a.usuario}</h3>
+                            <p class="review-text">${a.mensagem}</p>
                         </div>
                     #{/list}
                 </div>

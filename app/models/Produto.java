@@ -1,10 +1,12 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.OneToMany;
 
 import play.db.jpa.Model;
 
@@ -17,6 +19,7 @@ public class Produto extends Model{
 	
 	@Enumerated(EnumType.STRING)
 	public Status status;
+	
 	
 	public Produto(String nome, String descricao, Double preco, Status status,String foto) {
 		this.nome = nome;

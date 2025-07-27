@@ -22,10 +22,9 @@ public class Compras extends Controller{
 	}
 	
 	//salvar avaliação
-	public static void salvaravaliacao(Avaliacao a, Long id) {
-		Produto p = Produto.findById(id);
+	public static void salvaravaliacao(Avaliacao a) {
+		
 		Avaliacao avaliacao = a;
-		avaliacao.produto = p;
 		avaliacao.save();
 		principal();
 	}
@@ -55,6 +54,12 @@ public class Compras extends Controller{
 		avaliacao.status = Status.INATIVO;
 		avaliacao.save();
 		avaliacoes();
+	}
+	
+	public static void detalharproduto(Long id) {
+		Produto produto = Produto.findById(id);
+		List<Avaliacao> avaliacao = Avaliacao.find("byProduto_id", id).fetch();
+		render(produto, avaliacao);
 	}
 
 	
