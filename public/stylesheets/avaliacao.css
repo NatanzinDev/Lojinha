@@ -94,3 +94,42 @@
         .btn-delete:hover {
             color: #e63946; /* Vermelho para excluir */
         }
+        
+        .review-author {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #333;
+    /* Removido o margin-bottom para controlar o espaço com o novo elemento */
+    margin: 0; 
+    display: flex;
+    align-items: center;
+}
+
+/* NOVO ESTILO PARA O PRODUTO AVALIADO */
+.reviewed-product {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9em;
+    color: #666;
+    background-color: #f9f9f9;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.reviewed-product .bx {
+    font-size: 1.2em;
+    color: #333;
+}
+/* FIM DO NOVO ESTILO */
+
+.review-text {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    padding-left: 5px;
+    border-left: 3px solid #e7c0a8;
+}

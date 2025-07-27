@@ -1,5 +1,7 @@
 package models;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -16,7 +18,6 @@ public class Produto extends Model{
 	@Enumerated(EnumType.STRING)
 	public Status status;
 	
-
 	public Produto(String nome, String descricao, Double preco, Status status,String foto) {
 		this.nome = nome;
 		this.descricao = descricao;

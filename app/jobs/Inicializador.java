@@ -36,19 +36,19 @@ public class Inicializador extends Job {
 
 			Avaliacao avaliacao1 = new Avaliacao(
 					"Simplesmente apaixonada! As peças são de altíssima qualidade e ainda mais bonitas que nas fotos. A entrega foi super rápida e chegou tudo embaladinho com muito capricho. Recomendo de olhos fechados!",
-					"Juliana Santos");
+					"Juliana Santos",p1);
 
 			Avaliacao avaliacao2 = new Avaliacao(
 					"Comprei o 'Conjunto Trevo' e fiquei impressionada com o brilho das pedras e com o acabamento, que é muito bem feito. Uma peça delicada e de presença. Adorei a compra.",
-					"Fernanda Costa");
+					"Fernanda Costa",p3);
 
 			Avaliacao avaliacao3 = new Avaliacao(
 					"Comprei a 'Pulseira Bracelete' de presente para minha esposa e ela amou! É uma peça elegante que combina com tudo. O processo de compra foi fácil e a entrega foi no prazo.",
-					"Ricardo Alves");
+					"Ricardo Alves",p5);
 
 			Avaliacao avaliacao4 = new Avaliacao(
 					"Já é minha terceira compra na loja e a qualidade me surpreende a cada pedido. Os brincos são leves e não incomodam na orelha. Já virei cliente fiel. Parabéns pelo trabalho!",
-					"Bruna Lima");
+					"Bruna Lima",p8);
 
 			avaliacao1.save();
 			avaliacao2.save();

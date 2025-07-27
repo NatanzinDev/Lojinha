@@ -11,7 +11,8 @@ public class Compras extends Controller{
 	
 	//página principal
 	public static void principal() {
-		render();
+		List<Produto> produtos = Produto.findAll();
+		render(produtos);
 	}
 	
 	//Página de produtos 
@@ -21,8 +22,10 @@ public class Compras extends Controller{
 	}
 	
 	//salvar avaliação
-	public static void salvaravaliacao(Avaliacao a) {
+	public static void salvaravaliacao(Avaliacao a, Long id) {
+		Produto p = Produto.findById(id);
 		Avaliacao avaliacao = a;
+		avaliacao.produto = p;
 		avaliacao.save();
 		principal();
 	}
