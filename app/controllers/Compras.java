@@ -67,6 +67,10 @@ public class Compras extends Controller{
 		List<Avaliacao> avaliacao = Avaliacao.find("byProduto_id", id).fetch();
 		render(produto, avaliacao);
 	}
+	
+	public static void contato() {
+		render();
+	}
 
 	
 	
