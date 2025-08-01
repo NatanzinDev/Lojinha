@@ -26,6 +26,10 @@ public class Avaliacao extends Model{
 		this.status = Status.ATIVO;
 		this.produto = p;
 	}
+	
+	public Avaliacao() {
+		this.status = Status.ATIVO;
+	}
 
 	
 	

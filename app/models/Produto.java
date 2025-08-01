@@ -29,6 +29,18 @@ public class Produto extends Model{
 		this.foto = foto;
 	}
 	
+	public Produto(String nome, String descricao, Double preco,String foto) {
+		this.nome = nome;
+		this.descricao = descricao;
+		this.preco = preco;
+		this.status = Status.ATIVO;
+		this.foto = foto;
+	}
+	
+	public Produto() {
+		this.status = Status.ATIVO;
+	}
+	
 	
 	
 	
