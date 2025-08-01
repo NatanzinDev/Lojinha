@@ -32,10 +32,12 @@ public class Compras extends Controller{
 	//listar avaliações
 	public static void avaliacoes(String busca) {
 		List<Avaliacao> avaliacao;
+		
 	
 		if(busca == null) {
 			avaliacao = Avaliacao.find("status <> ?1", Status.INATIVO).fetch();
 		}else {
+			busca = busca.toLowerCase();
 			avaliacao = Avaliacao.find("(lower(mensagem) like ?1 or lower(usuario) like ?1) and status <> ?2" , "%"+busca+"%",Status.INATIVO).fetch();
 		}
 		render(avaliacao,busca);
